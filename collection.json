@@ -1,0 +1,254 @@
+{
+  "info": {
+    "name": "api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.tryvital.io/v2",
+      "type": "string"
+    },
+    {
+      "key": "x-vital-api-key",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "auth": {
+    "apikey": [
+      {
+        "key": "value",
+        "value": "{{x-vital-api-key}}",
+        "type": "string"
+      },
+      {
+        "key": "key",
+        "value": "{{x-vital-api-key}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ],
+    "type": "apikey"
+  },
+  "item": [
+    {
+      "name": "Activity",
+      "item": [
+        {
+          "name": "Activity Summary",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/summary/activity/:user_id?provider=Oura&start_date=2023-01-01&end_date=2023-01-25",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "summary",
+                "activity",
+                ":user_id"
+              ],
+              "query": [
+                {
+                  "key": "provider",
+                  "description": "Provider like Oura, Strava, etc.",
+                  "value": "Oura"
+                },
+                {
+                  "key": "start_date",
+                  "description": "Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00",
+                  "value": "2023-01-01"
+                },
+                {
+                  "key": "end_date",
+                  "description": "Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59",
+                  "value": "2023-01-25"
+                }
+              ],
+              "variable": [
+                {
+                  "key": "user_id",
+                  "description": "User id returned by vital create user id request.  This id should be stored in your database against the user and used for all interactions with the vital api.\n",
+                  "value": "70c64d5a-ff06-4c16-b137-361b2441d86e"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "x-vital-api-key",
+                "value": "{{x-vital-api-key}}",
+                "type": "string"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{baseUrl}}/summary/activity/:user_id?provider=Oura&start_date=2023-01-01&end_date=2023-01-25",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "summary",
+                    "activity",
+                    ":user_id"
+                  ],
+                  "query": [
+                    {
+                      "key": "provider",
+                      "description": "Provider like Oura, Strava, etc.",
+                      "value": "Oura"
+                    },
+                    {
+                      "key": "start_date",
+                      "description": "Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00",
+                      "value": "2023-01-01"
+                    },
+                    {
+                      "key": "end_date",
+                      "description": "Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59",
+                      "value": "2023-01-25"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "user_id",
+                      "description": "User id returned by vital create user id request.  This id should be stored in your database against the user and used for all interactions with the vital api.\n",
+                      "value": "70c64d5a-ff06-4c16-b137-361b2441d86e"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "x-vital-api-key",
+                    "value": "{{x-vital-api-key}}",
+                    "type": "string"
+                  }
+                ],
+                "method": "GET"
+              },
+              "body": "{\n    \"activity\": [\n        {\n            \"source\": {\n                \"name\": \"Oura\",\n                \"slug\": \"oura\",\n                \"logo\": \"https://cdn.shopify.com/s/files/1/0163/4644/7926/files/black-on-white-oura-logo.png?v=1584479070\"\n            },\n            \"date\": \"2023-01-27\",\n            \"user_id\": \"70c64d5a-ff06-4c16-b137-361b2441d86e\",\n            \"calories_total\": 100,\n            \"calories_active\": 2000,\n            \"steps\": 10000,\n            \"daily_movement\": 200,\n            \"low\": 6400,\n            \"medium\": 2000,\n            \"high\": 4500\n        }\n    ]\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Raw Summary",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/summary/activity/:user_id/raw?provider=Oura&start_date=2023-01-01&end_date=2023-01-25",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "summary",
+                "activity",
+                ":user_id",
+                "raw"
+              ],
+              "query": [
+                {
+                  "key": "provider",
+                  "description": "Provider like Oura, Strava, etc.",
+                  "value": "Oura"
+                },
+                {
+                  "key": "start_date",
+                  "description": "Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00",
+                  "value": "2023-01-01"
+                },
+                {
+                  "key": "end_date",
+                  "description": "Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59",
+                  "value": "2023-01-25"
+                }
+              ],
+              "variable": [
+                {
+                  "key": "user_id",
+                  "description": "User id returned by vital create user id request.  This id should be stored in your database against the user and used for all interactions with the vital api.\n",
+                  "value": "70c64d5a-ff06-4c16-b137-361b2441d86e"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "x-vital-api-key",
+                "value": "{{x-vital-api-key}}",
+                "type": "string"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{baseUrl}}/summary/activity/:user_id/raw?provider=Oura&start_date=2023-01-01&end_date=2023-01-25",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "summary",
+                    "activity",
+                    ":user_id",
+                    "raw"
+                  ],
+                  "query": [
+                    {
+                      "key": "provider",
+                      "description": "Provider like Oura, Strava, etc.",
+                      "value": "Oura"
+                    },
+                    {
+                      "key": "start_date",
+                      "description": "Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00",
+                      "value": "2023-01-01"
+                    },
+                    {
+                      "key": "end_date",
+                      "description": "Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59",
+                      "value": "2023-01-25"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "user_id",
+                      "description": "User id returned by vital create user id request.  This id should be stored in your database against the user and used for all interactions with the vital api.\n",
+                      "value": "70c64d5a-ff06-4c16-b137-361b2441d86e"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "x-vital-api-key",
+                    "value": "{{x-vital-api-key}}",
+                    "type": "string"
+                  }
+                ],
+                "method": "GET"
+              },
+              "body": "{\n    \"activity\": [\n        {\n            \"source\": {\n                \"name\": \"Oura\",\n                \"slug\": \"oura\",\n                \"logo\": \"https://cdn.shopify.com/s/files/1/0163/4644/7926/files/black-on-white-oura-logo.png?v=1584479070\"\n            },\n            \"date\": \"2023-01-27\",\n            \"user_id\": \"70c64d5a-ff06-4c16-b137-361b2441d86e\",\n            \"calories_total\": 100,\n            \"calories_active\": 2000,\n            \"steps\": 10000,\n            \"daily_movement\": 200,\n            \"low\": 6400,\n            \"medium\": 2000,\n            \"high\": 4500\n        }\n    ]\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    }
+  ]
+}
