@@ -241,7 +241,7 @@
                 ],
                 "method": "GET"
               },
-              "body": "{\n    \"activity\": [\n        {\n            \"source\": {\n                \"name\": \"Oura\",\n                \"slug\": \"oura\",\n                \"logo\": \"https://cdn.shopify.com/s/files/1/0163/4644/7926/files/black-on-white-oura-logo.png?v=1584479070\"\n            },\n            \"date\": \"2023-01-27\",\n            \"user_id\": \"70c64d5a-ff06-4c16-b137-361b2441d86e\",\n            \"calories_total\": 100,\n            \"calories_active\": 2000,\n            \"steps\": 10000,\n            \"daily_movement\": 200,\n            \"low\": 6400,\n            \"medium\": 2000,\n            \"high\": 4500\n        }\n    ]\n}",
+              "body": "{\n    \"activity\": [\n        {\n            \"source\": {\n                \"name\": \"Oura\",\n                \"slug\": \"oura\",\n                \"logo\": \"https://cdn.shopify.com/s/files/1/0163/4644/7926/files/black-on-white-oura-logo.png?v=1584479070\"\n            },\n            \"timestamp\": \"2022-08-04T12:42:44.847351+00:00\",\n            \"data\": {\n                \"data\": \"...provider_specific_data\"\n            },\n            \"provider_id\": \"e2b25f37-846e-49a9-bf5b-5bb24d62b289\",\n            \"user_id\": \"8e837eec-0717-41df-b108-43f4f206582a\",\n            \"source_id\": 1,\n            \"priority_id\": 1\n        }\n    ]\n}",
               "_postman_previewlanguage": "json"
             }
           ],
