@@ -6,7 +6,7 @@
   "variable": [
     {
       "key": "baseUrl",
-      "value": "https://api.tryvital.io/v2",
+      "value": "https://api.tryvital.io/",
       "type": "string"
     },
     {
@@ -43,14 +43,15 @@
           "name": "Activity Summary",
           "request": {
             "url": {
-              "raw": "{{baseUrl}}/summary/activity/:user_id?provider=Oura&start_date=2023-01-01&end_date=2023-01-25",
+              "raw": "{{baseUrl}}/v2/summary/activity/{user_id}?provider=Oura&start_date=2023-01-01&end_date=2023-01-25",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
+                "v2",
                 "summary",
                 "activity",
-                ":user_id"
+                "{user_id}"
               ],
               "query": [
                 {
@@ -93,14 +94,15 @@
               "code": 200,
               "originalRequest": {
                 "url": {
-                  "raw": "{{baseUrl}}/summary/activity/:user_id?provider=Oura&start_date=2023-01-01&end_date=2023-01-25",
+                  "raw": "{{baseUrl}}/v2/summary/activity/{user_id}?provider=Oura&start_date=2023-01-01&end_date=2023-01-25",
                   "host": [
                     "{{baseUrl}}"
                   ],
                   "path": [
+                    "v2",
                     "summary",
                     "activity",
-                    ":user_id"
+                    "{user_id}"
                   ],
                   "query": [
                     {
@@ -146,14 +148,15 @@
           "name": "Raw Summary",
           "request": {
             "url": {
-              "raw": "{{baseUrl}}/summary/activity/:user_id/raw?provider=Oura&start_date=2023-01-01&end_date=2023-01-25",
+              "raw": "{{baseUrl}}/v2/summary/activity/{user_id}/raw?provider=Oura&start_date=2023-01-01&end_date=2023-01-25",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
+                "v2",
                 "summary",
                 "activity",
-                ":user_id",
+                "{user_id}",
                 "raw"
               ],
               "query": [
@@ -197,14 +200,15 @@
               "code": 200,
               "originalRequest": {
                 "url": {
-                  "raw": "{{baseUrl}}/summary/activity/:user_id/raw?provider=Oura&start_date=2023-01-01&end_date=2023-01-25",
+                  "raw": "{{baseUrl}}/v2/summary/activity/{user_id}/raw?provider=Oura&start_date=2023-01-01&end_date=2023-01-25",
                   "host": [
                     "{{baseUrl}}"
                   ],
                   "path": [
+                    "v2",
                     "summary",
                     "activity",
-                    ":user_id",
+                    "{user_id}",
                     "raw"
                   ],
                   "query": [
